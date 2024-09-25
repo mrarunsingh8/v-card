@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model cards {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  solutaion String
+  firstName String
+  middleName String
+  lastName String
+  suffix String
+  nickName String
+  email String
+  workEmail String
+  organization String
+  orgTitle String
+  orgRole String
+  orgURL String
+  image String
+  logo String
+  qrCode String
+}
